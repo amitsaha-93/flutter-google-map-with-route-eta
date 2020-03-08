@@ -69,7 +69,7 @@ class _MovingCarScreenState extends State<MovingCarScreen> {
   void getCordinates(LatLng l) async {
     polylineCoordinates = await googleMapPolyline.getCoordinatesWithLocation(
         origin: l,
-        destination: LatLng(23.8451172, 90.4082837),
+        destination: LatLng(-19.9173135,-43.9030821),
         mode: RouteMode.driving);
 
     if (polylineCoordinates != null && polylineCoordinates.isNotEmpty) {
@@ -105,7 +105,7 @@ class _MovingCarScreenState extends State<MovingCarScreen> {
   void getCordinatesFromLatLng(LatLng latLng) async {
     polylineCoordinates = await googleMapPolyline.getCoordinatesWithLocation(
         origin: latLng,
-        destination: LatLng(23.8451172, 90.4082837),
+        destination: LatLng(-19.9173135,-43.9030821),
         mode: RouteMode.driving);
 
     if (polylineCoordinates != null && polylineCoordinates.isNotEmpty) {
@@ -451,7 +451,7 @@ void getlocation() async {
 
     var meter = distance(
         new lt.LatLng(cLoc.latitude,cLoc.longitude),
-        new lt.LatLng(23.8451172, 90.4082837)
+        new lt.LatLng(-19.9173135,-43.9030821)
     );
     if(meter<=30){
       if(!isDialogOpen){
